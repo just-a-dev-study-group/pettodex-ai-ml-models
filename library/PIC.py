@@ -44,7 +44,7 @@ def classify(path: str) -> str:
     img_array = img_array / 255.0
 
     # Load model
-    model_path = "model.weights.h5"
+    model_path = "PIC.weights.h5"
     model.load_weights(model_path)
 
     # Predict classification for current image
