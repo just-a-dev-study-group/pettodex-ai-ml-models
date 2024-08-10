@@ -3,6 +3,9 @@ The Pet Image Classifinator (PIC) is a library for the image classification mode
 
 This library contains the following methods:
 - classify(path: str) -> str: Takes in a URL path as input and returns its classification as a string.
+
+Proper Usage:
+Make sure that this file is in the same folder as the PIC.weights.h5 file, which contains the model weights for the CNN visual classification model.
 """
 
 from tensorflow.keras.preprocessing import image
