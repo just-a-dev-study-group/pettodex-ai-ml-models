@@ -29,3 +29,11 @@ pip install numpy==1.21.1
 pip install django
 pip install pillow
 ```
+
+4. Run the server.
+
+```bash
+python manage.py runserver
+```
+
+If the server does not run, check if your current terminal instance is running virtual environment. Repeat step 2 on your new instance if you are using multiple terminals.
