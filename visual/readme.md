@@ -3,6 +3,29 @@
 This server is running on a Django backend.
 
 ## Instructions
-1. In this directory, run `python manage.py runserver` to run this server on port 8000 (default).
-2. There is no view for `localhost/`. This is by design. Go to `localhost/identify/` to see server instructions.
-3. To run this server on a particular port, use `python manage.py runserver <insert port>`.
+1. Create a python virtual environment (venv). DO NOT push this virtual environment into the repository. I'll ban you if you do (jk).
+
+```bash
+python -m venv pettodex-venv
+```
+
+2. Activate the virtual environment.
+
+```bash
+source pettodex-venv/bin/activate
+```
+
+3. Install the relevant packages.
+
+```bash
+pip install tensorflow numpy==1.21.1 django pillow
+```
+
+If that doesn't work, install the packages one by one.
+
+```bash
+pip install tensorflow
+pip install numpy==1.21.1
+pip install django
+pip install pillow
+```
