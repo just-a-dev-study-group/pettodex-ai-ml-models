@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from ../library/PIC.py import classify
+from library.PIC import classify
 
 @csrf_exempt
 def index(request):
