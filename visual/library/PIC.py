@@ -16,6 +16,7 @@ import tensorflow as tf
 import numpy as np
 import requests
 from PIL import Image
+from io import BytesIO
 
 def classify(path: str) -> str:
     """

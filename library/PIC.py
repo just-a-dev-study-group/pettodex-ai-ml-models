@@ -16,6 +16,7 @@ import tensorflow as tf
 import numpy as np
 import requests
 from PIL import Image
+from io import BytesIO
 
 def classify(path: str) -> str:
     """
@@ -38,7 +39,7 @@ def classify(path: str) -> str:
     # Download the image
     response = requests.get(path)
     response.raise_for_status()
-    img = Image.open(BytesIO(response.content))
+    img = Image.open(io.BytesIO(response.content))
 
     # Resize and preprocess image
     img = img.resize((32, 32))
