@@ -12,6 +12,10 @@ graph TD
 
 Each folder contains a server for running an AI service that the Pettodex backend can subscribe to.
 
+## Development Environment
+1. To run a server, select a folder (in this case, only the visual folder is available) and follow the contents of its `readme.md` file.
+2. If you want to develop an AI/ML model, store your model inside the library folder along with its model weights as `model_name.py` and `model_name.weights.h5` respectively.
+
 ## Priority
 For now, our priority is to create the API for the visual model. After that, we'll need to pick out a publicly-available pre-trained model to use for the service.
 
