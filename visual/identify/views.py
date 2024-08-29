@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from library.PIC import classify
+import json
 
 @csrf_exempt
 def index(request):
@@ -14,7 +15,15 @@ def single(request):
     if request.method == "GET":
         return HttpResponse("Send an image here via a POST request to submit a singular image of a pet.")
     elif request.method == "POST":
-        return HttpResponse("You have sent a POST request")
+        # Remove escape characters from payload
+        # url = re.sub(r'\\', '', request.read())
+        url = json.loads(request.body.decode("utf-8"))
+        url = url.get("url")
+
+        # Save input into variable
+        out = classify(url)
+
+        return HttpResponse(out)
 
 @csrf_exempt
 def bulk(request):
